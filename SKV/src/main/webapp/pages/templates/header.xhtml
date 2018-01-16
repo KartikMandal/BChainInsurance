@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<h:form>
+		<p:commandButton id="dynaButton" value="About Institute" type="button" icon="ui-icon-star"/>
+		        <p:slideMenu overlay="true" trigger="dynaButton" my="left top" at="left bottom" style="width:200px">
+			        <p:submenu label="Ajax Menuitems">
+			            <p:menuitem value="Save"   icon="ui-icon-disk"/>
+			            <p:menuitem value="Update"   icon="ui-icon-arrowrefresh-1-w"/>
+			        </p:submenu>
+			        <p:submenu label="Non-Ajax Menuitem">
+			            <p:menuitem value="Delete" ajax="false" icon="ui-icon-close"/>
+			        </p:submenu>
+			        <p:submenu label="Navigations" icon="ui-icon-extlink">
+			            <p:submenu label="Prime Links">
+			                <p:menuitem value="Prime" url="http://www.prime.com.tr" />
+			                <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />
+			            </p:submenu>
+			            <p:menuitem value="Mobile" />
+			        </p:submenu>
+			    </p:slideMenu>
+			    <p:commandButton id="dynaButton2" value="Admission" type="button" icon="ui-icon-search"/>
+		        <p:slideMenu overlay="true" trigger="dynaButton2" my="left top" at="left bottom" style="width:180px">
+			        <p:submenu label="Ajax Menuitems">
+			            <p:menuitem value="Save"   icon="ui-icon-disk"/>
+			            <p:menuitem value="Update"   icon="ui-icon-arrowrefresh-1-w"/>
+			        </p:submenu>
+			        <p:submenu label="Non-Ajax Menuitem">
+			            <p:menuitem value="Delete" ajax="false" icon="ui-icon-close"/>
+			        </p:submenu>
+			        <p:submenu label="Navigations" icon="ui-icon-extlink">
+			            <p:submenu label="Prime Links">
+			                <p:menuitem value="Prime" url="http://www.prime.com.tr" />
+			                <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />
+			            </p:submenu>
+			            <p:menuitem value="Mobile" />
+			        </p:submenu>
+			    </p:slideMenu>
+			     <p:commandButton id="dynaButton3" value="Infrastructure" type="button" icon="ui-icon-document"/>
+		        <p:slideMenu overlay="true" trigger="dynaButton3" my="left top" at="left bottom" style="width:180px">
+			        <p:submenu label="Laboratories">
+			            <p:menuitem value="CSE Labs"   icon="ui-icon-disk"/>
+			            <p:menuitem value="Civil Lab"   icon="ui-icon-arrowrefresh-1-w"/>
+			            <p:menuitem value="Mechnical Lab"   icon="ui-icon-arrowrefresh-1-w"/>
+			        </p:submenu>
+			        <p:menuitem value="Central Library" ajax="false" icon="ui-icon-close"/>
+			        <p:menuitem value="Class Room" ajax="false" icon="ui-icon-close"/>
+			        <p:menuitem value="Medical Unit" ajax="false" icon="ui-icon-close"/>
+			        <p:menuitem value="Auditorium" ajax="false" icon="ui-icon-close"/>
+			    </p:slideMenu>
+		   <p:commandButton id="dynaButton4" value="Admissions" type="button" icon="ui-icon-wrench"/>
+		        <p:slideMenu overlay="true" trigger="dynaButton4" my="left top" at="left bottom" style="width:180px">
+			        <p:menuitem value="Admission Procedure" ajax="false" icon="ui-icon-close"/>
+			        <p:menuitem value="Fee Structure" ajax="false" icon="ui-icon-close"/>
+			    </p:slideMenu>
+			    <p:commandButton id="dynaButton5" value="Department" type="button" icon="ui-icon-person"/>
+		        <p:slideMenu overlay="true" trigger="dynaButton5" my="left top" at="left bottom" style="width:180px">
+		        	<p:menuitem value="V-X"  icon="ui-icon-disk"/>
+			        <p:menuitem value="XI-XII"  icon="ui-icon-arrowrefresh-1-w"/>
+			        <p:submenu label="Vocational">
+			            <p:menuitem value="CSE"   icon="ui-icon-disk"/>
+			            <p:menuitem value="CIVIL"   icon="ui-icon-arrowrefresh-1-w"/>
+			            <p:menuitem value="MECHINICAL"   icon="ui-icon-arrowrefresh-1-w"/>
+			        </p:submenu>
+			    </p:slideMenu>
+			    <p:commandButton id="dynaButton6" value="Faculty" type="button" icon="ui-icon-person"/>
+		        <p:slideMenu overlay="true" trigger="dynaButton6" my="left top" at="left bottom" style="width:180px">
+			            <p:menuitem value="Faculty Details"   icon="ui-icon-disk" url="/outpages/facultyDetails.xhtml" ajax="false"/>
+			            <p:menuitem value="Update"   icon="ui-icon-arrowrefresh-1-w"/>
+			        <p:submenu label="Non-Ajax Menuitem">
+			            <p:menuitem value="Delete" ajax="false" icon="ui-icon-close"/>
+			        </p:submenu>
+			        <p:submenu label="Navigations" icon="ui-icon-extlink">
+			            <p:submenu label="Prime Links">
+			                <p:menuitem value="Prime" url="http://www.prime.com.tr" target="content"/>
+			                <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />
+			            </p:submenu>
+			            <p:menuitem value="Mobile" />
+			        </p:submenu>
+			    </p:slideMenu>
+			    <p:commandButton id="dynaButton7" value="Strdents" type="button" icon="ui-icon-person" style="font-weight:bold; color:#0000FF;font-size:12px;" />
+		        <p:slideMenu overlay="true" trigger="dynaButton7" my="left top" at="left bottom" style="width:180px">
+			        <p:menuitem value="Hostel Accommodation" icon="ui-icon-close" style="font-weight:bold; color:#0000FF; font-size:10px;" onclick="selectServiceLink(this)" url="/outpages/test.xhtml" ajax="false"/>
+			        <p:menuitem value="Dress Code" icon="ui-icon-close" style="font-weight:bold; color:#0000FF; font-size:10px;" onclick="selectServiceLink(this)" url="/outpages/details2.xhtml" ajax="false" />
+			        <p:menuitem value="Anti-Ragging" icon="ui-icon-close" style="font-weight:bold; color:#0000FF; font-size:10px;" url="/outpages/login.xhtml" ajax="false"/>
+			    </p:slideMenu>
+			    <p:commandButton id="dynaButton8" value="Contact us" type="button" icon="ui-icon-person"/>
+		        <p:slideMenu overlay="true" trigger="dynaButton8" my="left top" at="left bottom" style="width:180px">
+			        <p:submenu label="Ajax Menuitems">
+			            <p:menuitem value="Save"   icon="ui-icon-disk"/>
+			            <p:menuitem value="Update"   icon="ui-icon-arrowrefresh-1-w"/>
+			        </p:submenu>
+			        <p:submenu label="Non-Ajax Menuitem">
+			            <p:menuitem value="Delete" ajax="false" icon="ui-icon-close"/>
+			        </p:submenu>
+			        <p:submenu label="Navigations" icon="ui-icon-extlink">
+			            <p:submenu label="Prime Links">
+			                <p:menuitem value="Prime" url="http://www.prime.com.tr" />
+			                <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />
+			            </p:submenu>
+			            <p:menuitem value="Mobile" />
+			        </p:submenu>
+			    </p:slideMenu>
+				</h:form>
+	    </ui:composition>

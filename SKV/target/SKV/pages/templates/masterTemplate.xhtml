@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets" 
+	xmlns:p="http://primefaces.org/ui">
+   <f:view contentType="text/html" locale="#{userSettings.locale}">
+    <h:head title="Saharda School Sample Web Application">
+        <f:facet name="first">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <meta http-equiv="pragma" content="no-cache"/>
+            <meta http-equiv="cache-control" content="no-cache"/>
+            <meta http-equiv="expires" content="0"/>
+        </f:facet>
+    </h:head>
+    
+        <h:graphicImage library="images" name="saharda_logo.jpg" styleClass="logo"/>
+
+        <h:form id="mainForm" prependId="false">
+            <div class="slogan">
+               <!--  <h:outputText value="JSF-PrimeFaces-CDI Sample WebClient - &#169; 2013-2014"/>-->
+                <p:panelGrid columns="2" styleClass="companyHeaderGrid">
+            
+                  <p:imageSwitch effect="fade" id="fadeEffect">
+				    <ui:repeat value="#{imagesView.images}" var="image" id="fadeEffectImages">
+				        <h:graphicImage library="images/faculty" name="#{image}" id="image" width="550" height="90"/>
+				    </ui:repeat>
+				</p:imageSwitch>
+				
+				<p:commandButton value="#{msgs['logout']}" icon="ui-icon-power" ajax="false"
+                                 style="margin-left:50px" action="#{logoutController.logout}" immediate="true"/> 
+              </p:panelGrid>
+            </div>
+
+    <ui:include src="header.xhtml"/>
+    <h:body>
+        <ui:insert name="content" />
+    </h:body>
+    <ui:include src="footer.xhtml"/>
+ </h:form>
+ <h:outputStylesheet library="css" name="common.css"/>
+        <h:outputScript library="js" name="common.js" target="body"/>
+        <ui:insert name="resources"/>
+    
+</f:view>
+</html>

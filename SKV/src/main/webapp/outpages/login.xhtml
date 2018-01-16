@@ -1,0 +1,32 @@
+<ui:composition template="/pages/templates/masterTemplate.xhtml"
+				xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:f="http://java.sun.com/jsf/core"
+    			xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:of="http://omnifaces.org/functions"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+ <ui:define name="title">test</ui:define>
+    <ui:define name="content">
+			<h:form>
+			    <h:panelGrid id="grid" columns="3" cellpadding="5">
+			        <p:outputLabel for="default" value="Default:" />
+			        <p:inputText id="default" required="true" />
+			        <p:message for="default" />
+			 
+			        <p:outputLabel for="txt" value="Text:" />
+			        <p:inputText id="txt" required="true" />
+			        <p:message for="txt" display="text" />
+			 
+			        <p:outputLabel for="icon" value="Icon:" />
+			        <p:inputText id="icon" required="true" />
+			        <p:message for="icon" display="icon" />
+			 
+			        <p:outputLabel for="tt" value="Tooltip:" />
+			        <p:inputText id="tt" required="true" />
+			        <p:message for="tt" display="tooltip" />
+			    </h:panelGrid>
+			 
+			    <p:commandButton id="submitButton" value="Submit" />
+			</h:form>
+	</ui:define>
+</ui:composition>
