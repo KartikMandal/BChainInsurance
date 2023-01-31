@@ -18,7 +18,7 @@ http://localhost:8060/BChainInsurance/rest/block/add?insuranceId="2324830"&insur
 
 get the index wise block details http://localhost:8060/BChainInsurance/rest/block/getBlockByIndexWise?index=2
 
-convert txn to btc using http://localhost:8060/BChainInsurance/rest/block/convertToBTC?name=Java&email=java@yodlee.com&amount=10000.0
+convert txn to btc using http://localhost:8060/BChainInsurance/rest/block/convertToBTC?name=Java&email=java@test.com&amount=10000.0
 
 -add peer in current system using http://localhost:8060/BChainInsurance/rest/peer/addPeer?port=2010
 
